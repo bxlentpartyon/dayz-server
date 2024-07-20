@@ -1,7 +1,7 @@
 [Unit]
 Description=DayZ Dedicated Server
 Wants=network-online.target
-After=syslog.target network.target nss-lookup.target network-online.target
+After=syslog.target network.target nss-lookup.target network-online.target multi-user.target
 
 [Service]
 ExecStartPre=/data/dayz/update.sh
