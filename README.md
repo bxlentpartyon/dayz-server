@@ -15,6 +15,10 @@ It was not working when placed at either of these locations:
 /data/dayz/battleye/BEServer_x64.cfg
 /data/dayz/battleye/beserver_x64.cfg
 
+## Port Forwarding
+
+You not only need to forward ports with firewall-cmd, but you also need to set up an OCI ingress rule on your VNIC/Subnet.
+
 # To Do
 
 ## Fix selinux
