@@ -26,6 +26,11 @@ You not only need to forward ports with firewall-cmd, but you also need to set u
 I currently have manually chcon'd update.sh and DayZServer to file type bin_t to get the
 systemd service working.  This needs to be set up more permanently.
 
+The commands for this are:
+
+chcon -t bin_t /data/dayz/update.sh
+chcon -t bin_t /data/dayz/DayZServer
+
 ## Save off config stuff
 
 I need to create a git repo with my config files/scripts.
