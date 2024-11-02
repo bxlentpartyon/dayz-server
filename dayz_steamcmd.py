@@ -21,6 +21,9 @@ def main():
     child.expect('Steam>')
     child.sendline('workshop_download_item 221100 1828439124')
     child.interact()
+    child.expect('Steam>')
+    child.sendline('workshop_download_item 221100 1646187754')
+    child.interact()
     if child.isalive():
         print('Child still alive - closing...')
         child.close()
