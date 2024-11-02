@@ -21,16 +21,6 @@ You not only need to forward ports with firewall-cmd, but you also need to set u
 
 # To Do
 
-## Fix selinux
-
-I currently have manually chcon'd update.sh and DayZServer to file type bin_t to get the
-systemd service working.  This needs to be set up more permanently.
-
-The commands for this are:
-
-chcon -t bin_t /data/dayz/update.sh
-chcon -t bin_t /data/dayz/DayZServer
-
 ## Save off config stuff
 
 I need to create a git repo with my config files/scripts.
@@ -40,6 +30,30 @@ I need to create a git repo with my config files/scripts.
 -The server currently doesn't have any restarts set up.  This definitely needs to be fixed.-
 
 I think this is fixed - needs to be verified.
+
+# Done
+
+## Fix selinux
+
+### Issue
+
+I currently have manually chcon'd update.sh and DayZServer to file type bin_t to get the
+systemd service working.  This needs to be set up more permanently.
+
+The commands for this are:
+
+chcon -t bin_t /data/dayz/update.sh
+chcon -t bin_t /data/dayz/DayZServer
+
+### Solution
+
+Ran:
+
+```
+sudo semanage fcontext -a -t bin_t /data/dayz/update.sh
+sudo semanage fcontext -a -t bin_t /data/dayz/DayZServer
+sudo restorecon -Rv /data
+```
 
 # Useful Links
 
