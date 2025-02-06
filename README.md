@@ -19,6 +19,9 @@ It was not working when placed at either of these locations:
 
 You not only need to forward ports with firewall-cmd, but you also need to set up an OCI ingress rule on your VNIC/Subnet.
 
+sudo firewall-cmd --permanent --zone=public --add-port=2320/udp
+sudo firewall-cmd --reload
+
 ## Adding mods
 
 You need to do the following to add a mod:
