@@ -4,7 +4,6 @@ Wants=network-online.target
 After=syslog.target network.target nss-lookup.target network-online.target multi-user.target
 
 [Service]
-ExecStartPre=/data/dayz/update.sh
 ExecStart=/data/dayz/DayZServer -config=serverDZ.cfg -port=2302 "-mod=1559212036;1828439124;1646187754" -BEpath=battleye -profiles=profiles -dologs -adminlog -netlog -freezecheck
 WorkingDirectory=/data/dayz/
 LimitNOFILE=100000
