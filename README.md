@@ -1,4 +1,6 @@
-# Notes
+# DayZ Server Scripts
+
+A lot of the info below is outdated or somewhat incorrect.  Most of it is still useful, but it needs to be cleaned up.
 
 ## Generating passwords
 
